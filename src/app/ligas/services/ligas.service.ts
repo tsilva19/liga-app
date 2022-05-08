@@ -7,7 +7,9 @@ import { delay, first, tap } from 'rxjs/operators';
 })
 export class LigasService {
 
-  private readonly API = '/assets/ligas.json';
+  //private readonly API = '/assets/ligas.json';
+
+  private readonly API = 'api/ligas';
 
   constructor(private httpClient: HttpClient) { }
 
