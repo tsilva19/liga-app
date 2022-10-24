@@ -16,7 +16,7 @@ export class LigasComponent implements OnInit {
   ligas$:Observable <Liga[]>;
   //ligas: Liga[] = [];
 
-  displayedColumns = ['emblema', 'name', 'pontos' ];
+  displayedColumns = ['emblema', 'name', 'pontos', 'actions' ];
 
 
   constructor(

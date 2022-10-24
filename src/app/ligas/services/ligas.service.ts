@@ -17,7 +17,7 @@ export class LigasService {
    return this.httpClient.get<Liga[]>(this.API)
     .pipe(
       first(),
-      delay(5000),
+      delay(1000),
       tap(ligas => console.log(ligas))
     );
   }

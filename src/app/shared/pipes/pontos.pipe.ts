@@ -7,10 +7,10 @@ export class PontosPipe implements PipeTransform {
 
   transform(value: string): string {
     switch(value){
-      case 'Kabum': return 'gamepad';
+      case 'Kabum': return 'beenhere';
       case 'PAIN': return 'computer';
     }
-    return 'gamepad';
+    return 'beenhere';
   }
 
 }
