@@ -23,4 +23,9 @@ export class LigasService {
       tap(ligas => console.log(ligas))
     );
   }
+
+  save(registro: Liga){
+    //console.log(registro)
+    return this.httpClient.post<Liga>(this.API, registro).pipe(first());
+  }
 }
