@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
 import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/error-dialog.component';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-ligas',
@@ -16,12 +17,14 @@ export class LigasComponent implements OnInit {
   ligas$:Observable <Liga[]>;
   //ligas: Liga[] = [];
 
-  displayedColumns = ['emblema', 'name', 'pontos', 'actions' ];
+  displayedColumns = ['position','emblema', 'name', 'pontos', 'icone', 'actions' ];
 
 
   constructor(
     private ligasService: LigasService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router:  Router,
+    private route: ActivatedRoute
     ) {
       var myStatus = ["NO","EG","AB","EX"];
       console.log(this.formatQueryStringURLParamArray("status", myStatus));
@@ -36,6 +39,7 @@ export class LigasComponent implements OnInit {
     )
    // this.ligasService.lista().subscribe(ligas => this.ligas = ligas )
   }
+
 
   onError(errorMsg: string) {
        this.dialog.open(ErrorDialogComponent,{
@@ -59,5 +63,9 @@ export class LigasComponent implements OnInit {
     }
     return param;
 }
+
+  onAdd(){
+    this.router.navigate(['novo'], {relativeTo: this.route})
+  }
 
 }

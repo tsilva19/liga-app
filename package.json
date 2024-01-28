@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.config.js",
+    "start": "ng serve --proxy-config proxy.conf.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -16,12 +16,11 @@
     "@angular/compiler": "^14.2.7",
     "@angular/core": "^14.2.7",
     "@angular/forms": "^14.2.7",
-    "@angular/material": "^13.3.6",
+    "@angular/material": "^14.2.5",
     "@angular/platform-browser": "^14.2.7",
     "@angular/platform-browser-dynamic": "^14.2.7",
     "@angular/router": "^14.2.7",
     "rxjs": "~6.6.0",
-    "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -36,6 +35,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "tslib": "^2.4.0",
     "typescript": "~4.6.4"
   }
 }

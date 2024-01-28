@@ -1,0 +1,36 @@
+<mat-card>
+
+  <mat-toolbar color="primary">Cadastro de Times</mat-toolbar>
+
+  <mat-card-content>
+      <form [formGroup]="form" >
+        <mat-form-field class="full-width">
+
+          <input matInput placeholder="Link do Emblema" formControlName="emblema">
+
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Times</mat-label>
+          <mat-select formControlName="name">
+            <mat-option value="null"></mat-option>
+            <mat-option value="PAIN">PAIN</mat-option>
+            <mat-option value="LOUD">LOUD</mat-option>
+          </mat-select>
+
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+
+          <input matInput placeholder="Pontuação" formControlName="pontos">
+
+        </mat-form-field>
+      </form>
+</mat-card-content>
+
+<mat-card-actions>
+  <button mat-raised-button color="primary" (click)="onSubimit()">Salvar</button>
+  <button mat-raised-button (click)="onCancel()">Cancelar</button>
+</mat-card-actions>
+
+</mat-card>
